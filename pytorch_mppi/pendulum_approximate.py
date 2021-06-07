@@ -3,7 +3,7 @@ import numpy as np
 import torch
 import logging
 import math
-from pytorch_mppi import mppi
+import mppi
 from gym import wrappers, logger as gym_log
 
 gym_log.set_level(gym_log.INFO)
@@ -188,7 +188,7 @@ if __name__ == "__main__":
         train(new_data)
         logger.info("bootstrapping finished")
 
-    env = wrappers.Monitor(env, '/tmp/mppi/', force=True)
+    env = wrappers.Monitor(env, './tmp/mppi/', force=True)
     env.reset()
     if downward_start:
         env.env.state = [np.pi, 1]

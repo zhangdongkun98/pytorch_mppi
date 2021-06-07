@@ -307,10 +307,11 @@ class MPPI():
         return states[:, 1:]
 
 
-def run_mppi(mppi, env, retrain_dynamics, retrain_after_iter=50, iter=1000, render=True):
+def run_mppi(mppi: MPPI, env, retrain_dynamics, retrain_after_iter=50, iter=1000, render=True):
     dataset = torch.zeros((retrain_after_iter, mppi.nx + mppi.nu), dtype=mppi.U.dtype, device=mppi.d)
     total_reward = 0
     for i in range(iter):
+        print('i: ', i)
         state = env.state.copy()
         command_start = time.perf_counter()
         action = mppi.command(state)
