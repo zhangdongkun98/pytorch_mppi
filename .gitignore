@@ -2,4 +2,4 @@
 pytorch_mppi.egg-info
 __pycache__
 
-pytorch_mppi/tmp/
+tmp/
