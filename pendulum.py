@@ -15,8 +15,8 @@ logging.basicConfig(level=logging.DEBUG,
 
 if __name__ == "__main__":
     ENV_NAME = "Pendulum-v0"
-    TIMESTEPS = 15  # T
-    N_SAMPLES = 100  # K
+    TIMESTEPS = 10  # T
+    N_SAMPLES = 1000  # K
     ACTION_LOW = -2.0
     ACTION_HIGH = 2.0
 
@@ -81,3 +81,5 @@ if __name__ == "__main__":
                          lambda_=lambda_)
     total_reward = mppi.run_mppi(mppi_gym, env, train)
     logger.info("Total reward %f", total_reward)
+
+

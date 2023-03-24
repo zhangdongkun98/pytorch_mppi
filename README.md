@@ -74,3 +74,10 @@ to initialize the dynamics:
 # Related projects
 - [pytorch CEM](https://github.com/LemonPi/pytorch_cem) - an alternative MPC shooting method with similar API as this
 project
+
+
+
+
+# Note
+
+time_horizon 不是越大越好
